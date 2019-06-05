@@ -13,7 +13,7 @@ clc
 
 % ENTER HERE.
 % Enter an Excelfile name, then run the script.
-filename = '20180502_IJMData_Carma.xlsx';
+filename = '20190424_NewRR.xlsx';
 
 %% Import data.
 %Read the numeric data and the text headers from the excel file.
@@ -68,7 +68,7 @@ for i = 2:size(data,2)
             winsor(Zindexed(j,1),i) = nnnHighRaw*1.01;
             count(1,i) = count(1,i)+1;
         elseif Zindexed(j,2) < -3.3
-            winsor(Zindexed(j,1),i) = nnnLowRaw*0.99;
+            winsor(Zindexed(j,1),i) = nnnLowRaw*1.01;
             count(1,i) = count(1,i)+1;
         end
     end
